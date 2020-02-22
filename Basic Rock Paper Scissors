@@ -1,0 +1,45 @@
+import sys
+print("Rock Paper Scissors Rules: ", "\nRock(R) beats scissors \nScissors(S) beats paper \nPaper(P) beats rock ")
+scoreP1 = 0
+scoreP2 = 0
+scoreLimit = int(input("Pick when to win (eg. 4 = whoever gets 4 point first wins...): "))
+while True:
+    player1 = str(input("Player1's turn: "))
+    player2 = str(input("Player2's turn: "))
+    if player1 == "exit" or player2 == "exit":
+        sys.exit()
+    elif scoreP1 == scoreLimit:
+        print("Player1 WON THE GAME!")
+        sys.exit()
+    elif scoreP2 == scoreLimit:
+        print("Player2 WON THE GAME")
+        sys.exit()
+    elif player1 == "r" and player2 == "s":
+        print("Player1 wins!")
+        scoreP1 += 1
+        print("Player1's score: ", scoreP1)
+        print("Player2's score: ", scoreP2)
+    elif player1 == "r" and player2 == "r":
+        print("Tie!")
+    elif player1 == "r" and player2 == "p":
+        print("Player2 wins!")
+        scoreP2 += 1
+    elif player1 == "s" and player2 == "s":
+        print("Tie!")
+    elif player1 == "s" and player2 == "r":
+        print("Player 2 wins!")
+        scoreP2 += 1
+    elif player1 == "s" and player2 == "p":
+        print("Player 1 wins!")
+        scoreP1 += 1
+    elif player1 == "p" and player2 == "s":
+        print("Player 2 wins!")
+        scoreP2 += 1
+    elif player1 == "p" and player2 == "r":
+        print("Player 2 wins!")
+        scoreP2 += 1
+    elif player1 == "p" and player2 == "p":
+        print("Tie!")
+    else:
+        print("Please type 'r' for rock 'p' for paper and 's' for scissors")
+
