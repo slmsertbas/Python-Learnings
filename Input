@@ -1,0 +1,9 @@
+name = input("Insert your name here: ")
+age = int(input("Insert you age: "))
+
+birthDate = 2020 - age
+when100 = birthDate + 100
+howLong = when100 - 2020
+howLong = str(howLong)
+when100 = str(when100)
+print(name + " you will be 100 years old in " + howLong +" years fom now" + "\nwhich means in " + when100)
