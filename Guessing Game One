@@ -1,0 +1,15 @@
+import random
+import sys
+number = int(random.randrange(1, 10, 1))
+
+while True:
+    guess = int(input("Guess the secret number (Hint: between 1 and 10): "))
+    if guess == number:
+        print("Congratulations you have guessed correctly!")
+        sys.exit()
+    elif guess < number:
+        print("Higher")
+    elif guess > number:
+        print("Lower")
+    else:
+        print("Please insert an integer between 1 and 9 (Both include)")
