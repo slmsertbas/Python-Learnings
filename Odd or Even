@@ -1,0 +1,17 @@
+x = int(input("give me and integer: "))
+if (x % 2) == 0:
+    print("Your number is even")
+    if (x % 4) == 0:
+        print(str(x) + " can be divided by 4")
+    elif (x % 4) != 0:
+        print(str(x) + " cant be divided by 4")
+elif (x % 2) != 0:
+    print("Your number is odd")
+
+num = int(input("insert your amin number: "))
+check = int(input("Insert your divider: "))
+if (num % check == 0):
+    print(str(num) + " can be divided to " + str(check))
+else:
+    remainder = num % check
+    print("remainder is " + str(remainder))
