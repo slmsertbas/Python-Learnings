@@ -1,0 +1,15 @@
+number = int(input("Insert a number to see dividers: "))
+a = range(1, number + 1)
+dividers = list()
+for e in a:
+    if number % e == 0:
+        dividers.append(e)
+
+if dividers[0] == 1 and dividers[-1] == number and len(dividers) == 2:
+    print(number, "is a prime number")
+
+else:
+    print("Here are the dividers: ", dividers)
+    del dividers[0]
+    del dividers[-1]
+    print("Here are the dividers except 1 and", number, ":", dividers)
