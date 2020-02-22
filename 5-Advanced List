@@ -1,0 +1,30 @@
+import random
+
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+common = []
+for e1 in a:
+    for e2 in b:
+        if e1 == e2:
+            common.append(e1)
+for x in common:
+    if common.count(x) > 1:
+        del common[x]
+
+print(common)
+
+rndList1 = [random.randrange(1, 25) for i in range(4)]
+rndList2 = [random.randrange(1, 25) for i in range(4)]
+print(rndList1)
+print(rndList2)
+rndCommon = []
+for e in rndList1:
+    for x in rndList2:
+        if e == x:
+            rndCommon.append(e)
+if rndCommon:
+    print(rndCommon)
+else:
+    print("There is no common number")
+
+
